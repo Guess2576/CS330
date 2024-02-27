@@ -8,11 +8,8 @@ we haven't already included this header*/
 /* ~~~~~~~~~~~~~~~~~~~~~ your functions go here ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* Note: main() goes in the asgn4.c file                                     */
 
-void insertionSort(int *arr, int size);
-void selectionSort(int *arr, int size);
-
-// Function to perform Insertion Sort
-void insertionSort(int *arr, int size) {
+// Function prototypes
+void insertionSort(int *arr, int size) {                                        // Sort the array using insertion sort in "*(arr + i) syntax" (10%)
     int i, j, key;
     for (i = 1; i < size; i++) {
         key = *(arr + i);
@@ -25,8 +22,7 @@ void insertionSort(int *arr, int size) {
     }
 }
 
-// Function to perform Selection Sort
-void selectionSort(int *arr, int size) {
+void selectionSort(int *arr, int size) {                                        // Sort the array using selection sort in "*(arr + i) syntax" (10%)
     int i, j, minValueIndex, temp;
     for (i = 0; i < size - 1; i++) {
         minValueIndex = i;
@@ -43,14 +39,5 @@ void selectionSort(int *arr, int size) {
         }
     }
 }
-
-
-
-
-
-
-
-
-
 
 #endif
