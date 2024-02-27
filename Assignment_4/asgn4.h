@@ -10,15 +10,15 @@ we haven't already included this header*/
 
 // Function prototypes
 void insertionSort(int *arr, int size) {                                        // Sort the array using insertion sort in "*(arr + i) syntax" (10%)
-    int i, j, key;
-    for (i = 1; i < size; i++) {
-        key = *(arr + i);
-        j = i - 1;
+    int i, j, key;                                                              //*arr is pointer to the array entered by the user
+    for (i = 1; i < size; i++) {                                                //iterates iver the array starting with the second integer: ("i =1")
+        key = *(arr + i);                                                       //assign value of integer to key
+        j = i - 1;                                                              
         while (j >= 0 && key < *(arr + j)) {
             *(arr + j + 1) = *(arr + j);
-            j--;
+            j--;                                                               //decrements index "j" to continue comparing key
         }
-        *(arr + j + 1) = key;
+        *(arr + j + 1) = key;                                                   //puts key in its correct place in the array
     }
 }
 
@@ -32,7 +32,7 @@ void selectionSort(int *arr, int size) {                                        
             }
         }
         if (minValueIndex != i) {
-            // Swap arr[i] and arr[minValueIndex]
+                                                                                // Swap arr[i] and arr[minValueIndex]
             temp = *(arr + i);
             *(arr + i) = *(arr + minValueIndex);
             *(arr + minValueIndex) = temp;
